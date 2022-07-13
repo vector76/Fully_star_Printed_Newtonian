@@ -1,0 +1,32 @@
+{
+    "parameterSets": {
+        "D80F800": {
+            "ef_mount_depth": "60",
+            "max_print_ht": "210",
+            "mirror_focal_length": "800",
+            "mirror_od": "80",
+            "mirror_thickness": "13.5",
+            "part": "Primary Mount",
+            "purchased_tube_id": "100",
+            "purchased_tube_od": "114.5",
+            "secondary_size": "15",
+            "secondary_thickness": "4",
+            "support_free": "true",
+            "tube_source": "Purchased"
+        },
+        "D114F900": {
+            "max_print_ht": "210",
+            "mirror_focal_length": "900",
+            "mirror_od": "114",
+            "mirror_thickness": "14",
+            "part": "Primary Mount",
+            "purchased_tube_id": "89.2",
+            "purchased_tube_od": "76.3",
+            "secondary_size": "25",
+            "secondary_thickness": "5",
+            "support_free": "true",
+            "tube_source": "Printed"
+        }
+    },
+    "fileFormatVersion": "1"
+}
