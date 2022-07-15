@@ -1,5 +1,5 @@
 // Which part(s) to show
-part = "Assembled";  // [ "Primary Mount", "Spider", "View Mount", "Tripod Strap", "Assembled", "Parts Flat", "Primary Aligner", "Aiming Reticle", "Eyepiece Mount", "Canon EF Mount", "Focus Estimator", "ESP32-Cam Mount", "Tube Bottom", "Tube Middle", "Tube Top", "Tube Demonstration" ]
+part = "Assembled";  // [ "Primary Mount", "Spider", "View Mount", "Tripod Strap", "Assembled", "Parts Flat", "Primary Aligner", "Aiming Reticle", "Eyepiece Mount", "Canon EF Mount", "Focus Estimator", "ESP32-Cam Mount", "Tube Bottom", "Tube Middle", "Tube Top", "Tube Demonstration", "Micro Dobs Assembled", "Micro Dobs Print Layout" ]
 // Diameter of primary mirror (mm)
 mirror_od = 114;
 // Focal length (mm)
@@ -95,6 +95,7 @@ echo("###########################################");
 include <tube_modules.scad>
 include <core_parts.scad>
 include <accessories.scad>
+include <micro_dobs_mount.scad>
 
 // Core parts
 if (part_ == "Primary Mount") { primary_mount(); }
@@ -122,3 +123,6 @@ if (part_ == "Tube Top") { tube_top(); }
 if (part_ == "Tube Middle") { tube_mid(); }
 if (part_ == "Tube Bottom") { tube_bot(); }
 if (part_ == "Tube Demonstration") { difference() { tube_bot(50); tz(25) cylinder(d=500, h=500); } }
+// "Micro Dobsonian" mount
+if (part_ == "Micro Dobs Assembled") { micro_dobs_assembled(); }
+if (part_ == "Micro Dobs Print Layout") { micro_dobs_print_layout(); }
