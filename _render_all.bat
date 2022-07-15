@@ -5,7 +5,7 @@
 
 @set FOLDER=D80F800
 mkdir %FOLDER%
-for %%p in ("Spider" "Primary Mount" "View Mount" "Tripod Strap" "Primary Aligner" "Aiming Reticle") do (
+for %%p in ("Spider" "Primary Mount" "View Mount" "Tripod Strap" "Primary Aligner" "Aiming Reticle", "Micro Dobs Print Layout") do (
   %OPENSCAD% -p "F(star)P Newtonian.json" -P %FOLDER% -D "part2=\"%%~p\"" --export-format binstl -o "%FOLDER%\%FOLDER% %%~p.stl" %INP%
   %PYTHON% canonicalize.py "%FOLDER%\%FOLDER% %%~p.stl"
 )
@@ -13,7 +13,7 @@ for %%p in ("Spider" "Primary Mount" "View Mount" "Tripod Strap" "Primary Aligne
 
 @set FOLDER=D114F900
 mkdir %FOLDER%
-for %%p in ("Primary Mount" "Spider" "View Mount" "Tripod Strap" "Primary Aligner" "Aiming Reticle" "Tube Bottom" "Tube Middle" "Tube Top") do (
+for %%p in ("Primary Mount" "Spider" "View Mount" "Tripod Strap" "Primary Aligner" "Aiming Reticle" "Tube Bottom" "Tube Middle" "Tube Top", "Micro Dobs Print Layout") do (
   %OPENSCAD% -p "F(star)P Newtonian.json" -P %FOLDER% -D "part2=\"%%~p\"" --export-format binstl -o "%FOLDER%\%FOLDER% %%~p.stl" %INP%
   %PYTHON% canonicalize.py "%FOLDER%\%FOLDER% %%~p.stl"
 )
