@@ -41,7 +41,7 @@ module eyepiece_tube(ht=flange_to_focus, extra=0) {
   
   // two straps
   ministrap(id=tube_d);
-  translate([0, 0, ht-5]) ministrap(id=tube_d, feetht=support_free ? ht-5 : 0);
+  translate([0, 0, ht-5]) ministrap(id=tube_d, feetht=support_free ? ht-15 : 0);
   
   // tube to connect them
   difference() {
