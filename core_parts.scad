@@ -306,7 +306,8 @@ module spider() {
   
   // straight legs buckle when clamp is tightened.
   // how about some zig-zags for just a bit of compliance?
-  xyh = [ [ stem_d/2, 0, 10], [ tube_id/2-10, 0, 10], [ tube_id/2-5, -8, 10], [tube_id/2-2, 0, base-1], [tube_id/2+1, 0, base-1]];
+  // go all the way to center in case large cutout removes part of stem
+  xyh = [ [ -1, 0, 10], [ tube_id/2-10, 0, 10], [ tube_id/2-5, -8, 10], [tube_id/2-2, 0, base-1], [tube_id/2+1, 0, base-1]];
   
   for (a=[60, 180, -60]) rotate([0, 0, 180+a]) for (i=[0:len(xyh)-2]) hull() for (j=[0,1]) 
     translate([xyh[i+j][0], xyh[i+j][1], -base]) cylinder(d=spar_w, h=xyh[i+j][2], $fn=24);
